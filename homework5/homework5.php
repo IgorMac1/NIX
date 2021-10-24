@@ -1,12 +1,10 @@
 <?php
 //1) Написать программу, которая выводит простые числа, т.е. делящиеся без
 //остатка только на себя и на 1.
-
 $n = rand(1, 100);
 $no_prime = 0;
 $prime = 0;
 for ($i = 2; $i <= $n; $i++) {
-
     for ($j = 2; $j < $i; $j++) {
         if ($i % $j == 0) {
             $no_prime = $i;
@@ -19,10 +17,32 @@ for ($i = 2; $i <= $n; $i++) {
     }
 }
 echo "<hr>";
-
+//---------------------------------------------------------------------------------------------------------------------
 //2) Сгенерируйте 100 раз новое число и выведите на экран количество четных чисел из этих 100.
-
 $j = 0;
+$i = 0;
+
+while ($i <= 100) {
+    if ($i % 2 == 0) {
+        $j++;
+    }
+    $i++;
+}
+echo "Четных чилел " . $j;
+echo "<hr>";
+$j = 0;
+$i = 0;
+//---------------------------------------------------------------------------------------------------------------------
+do {
+    if ($i % 2 == 0) {
+        $j++;
+    }
+    $i++;
+} while ($i <= 100);
+echo "Четных чилел " . $j;
+echo "<hr>";
+$j = 0;
+//---------------------------------------------------------------------------------------------------------------------
 for ($i = 0; $i <= 100; $i++) {
     if ($i % 2 == 0) {
         $j++;
@@ -30,9 +50,75 @@ for ($i = 0; $i <= 100; $i++) {
 }
 echo "Четных чилел " . $j;
 echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$i = 0;
+$j = 0;
+$arr100 = [];
+while ($i <= 100) {
+    $arr100[] = $i;
+    $i++;
+}
+foreach ($arr100 as $key => $value) {
+    if ($value % 2 == 0) {
+        $j++;
+    }
+}
+echo "Четных чилел " . $j;
+echo "<hr>";
 
 //3) Сгенерируйте 100 раз число от 1 до 5 и выведите на экран сколько раз сгенерировались эти числа (1, 2, 3, 4 и 5).
-
+$count_1 = 0;
+$count_2 = 0;
+$count_3 = 0;
+$count_4 = 0;
+$count_5 = 0;
+$i = 0;
+while ($i <= 100) {
+    $j = rand(1, 5);
+    if ($j == 1) {
+        $count_1++;
+    } elseif ($j == 2) {
+        $count_2++;
+    } elseif ($j == 3) {
+        $count_3++;
+    } elseif ($j == 4) {
+        $count_4++;
+    } else {
+        $count_5++;
+    }
+    $i++;
+}
+echo "Цифра 1 сгенерировалась : " . $count_1 . "</br>" . "Цифра 2 сгенерировалась : " . $count_2 .
+    "</br>" . "Цифра 3 сгенерировалась : " . $count_3 . "</br>" . "Цифра 4 сгенерировалась : " . $count_4 .
+    "</br>" . "Цифра 5 сгенерировалась : " . $count_5 . "</br>";
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$count_1 = 0;
+$count_2 = 0;
+$count_3 = 0;
+$count_4 = 0;
+$count_5 = 0;
+$i = 0;
+do {
+    $j = rand(1, 5);
+    if ($j == 1) {
+        $count_1++;
+    } elseif ($j == 2) {
+        $count_2++;
+    } elseif ($j == 3) {
+        $count_3++;
+    } elseif ($j == 4) {
+        $count_4++;
+    } else {
+        $count_5++;
+    }
+    $i++;
+} while ($i <= 100);
+echo "Цифра 1 сгенерировалась : " . $count_1 . "</br>" . "Цифра 2 сгенерировалась : " . $count_2 .
+    "</br>" . "Цифра 3 сгенерировалась : " . $count_3 . "</br>" . "Цифра 4 сгенерировалась : " . $count_4 .
+    "</br>" . "Цифра 5 сгенерировалась : " . $count_5 . "</br>";
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
 $count_1 = 0;
 $count_2 = 0;
 $count_3 = 0;
@@ -51,14 +137,84 @@ for ($i = 0; $i <= 100; $i++) {
     } else {
         $count_5++;
     }
-
 }
 echo "Цифра 1 сгенерировалась : " . $count_1 . "</br>" . "Цифра 2 сгенерировалась : " . $count_2 .
     "</br>" . "Цифра 3 сгенерировалась : " . $count_3 . "</br>" . "Цифра 4 сгенерировалась : " . $count_4 .
     "</br>" . "Цифра 5 сгенерировалась : " . $count_5 . "</br>";
 echo "<hr>";
-
+//---------------------------------------------------------------------------------------------------------------------
+$count_1 = 0;
+$count_2 = 0;
+$count_3 = 0;
+$count_4 = 0;
+$count_5 = 0;
+$i = 0;
+$arr = [];
+while ($i <= 100) {
+    $arr[] = $i;
+    $i++;
+}
+foreach ($arr as $key => $value) {
+    $j = rand(1, 5);
+    if ($j == 1) {
+        $count_1++;
+    } elseif ($j == 2) {
+        $count_2++;
+    } elseif ($j == 3) {
+        $count_3++;
+    } elseif ($j == 4) {
+        $count_4++;
+    } else {
+        $count_5++;
+    }
+}
+echo "Цифра 1 сгенерировалась : " . $count_1 . "</br>" . "Цифра 2 сгенерировалась : " . $count_2 .
+    "</br>" . "Цифра 3 сгенерировалась : " . $count_3 . "</br>" . "Цифра 4 сгенерировалась : " . $count_4 .
+    "</br>" . "Цифра 5 сгенерировалась : " . $count_5 . "</br>";
+echo "<hr>";
 //4) Используя условия и циклы сделать таблицу в 5 колонок и 3 строки (5x3), отметить разными цветами часть ячеек.
+$a = 0;
+$b = 0;
+echo "<table border='1'";
+while ($a < 3) {
+    if ($b == 5) {
+        $b = 0;
+    }
+    echo "<tr>";
+    $a++;
+    while ($b < 5) {
+        $col1 = rand(1, 255);
+        $col2 = rand(1, 255);
+        $col3 = rand(1, 255);
+        echo "<td style=background-color:rgb($col1,$col2,$col3);>&nbps</td>";
+        $b++;
+
+    }
+    echo "</tr>";
+}
+echo "</table>";
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$a = 0;
+$b = 0;
+echo "<table border='1'";
+do {
+    if ($b == 5) {
+        $b = 0;
+    }
+    echo "<tr>";
+    $a++;
+    do {
+        $col1 = rand(1, 255);
+        $col2 = rand(1, 255);
+        $col3 = rand(1, 255);
+        echo "<td style=background-color:rgb($col1,$col2,$col3);>&nbps</td>";
+        $b++;
+    } while ($b < 5);
+} while ($a < 3);
+echo "</table>";
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
 
 echo "<table border='1'";
 for ($a = 0; $a < 3; $a++) {
@@ -360,22 +516,374 @@ echo "<hr>";
 //let str = 'Hi I am ALex'
 //сделать ее с с маленьких букв
 $letStr = 'Hi I am ALex';
-$letStrArr = [];
-$i =0;
+$i = 0;
 $str = '';
-while (isset($letStr[$i])){
-    $str.= mb_strtolower($letStr[$i]);
+while (isset($letStr[$i])) {
+    $str .= mb_strtolower($letStr[$i]);
     $i++;
 }
+echo "While : ";
 echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$letStr = 'Hi I am ALex';
+$i = 0;
+$str = '';
+do {
+    $str .= mb_strtolower($letStr[$i]);
+    $i++;
+} while (isset($letStr[$i]));
+echo "Do while : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$letStr = 'Hi I am ALex';
+$i = 0;
+$count = 0;
+$str = '';
+for ($i; isset($letStr[$i]); $i++) {
+    $count = $i;
+}
+for ($count = 0; $count <= $i; $count++) {
+    $str .= mb_strtolower($letStr[$count]);
+}
+echo "For : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$letStr = 'Hi I am ALex';
+$letStrArr = [];
+$i = 0;
+$count = 0;
+$str = '';
+while (isset($letStr[$i])) {
+    $letStrArr[] = $letStr[$i];
+    $i++;
+}
+foreach ($letStrArr as $key => $value) {
+    $str .= mb_strtolower($value);
+}
+echo "Foreach : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+//5. Дана строка
+//let str = 'Hi I am ALex'
+//сделать все буквы большие
+$letStr = 'Hi I am ALex';
+$i = 0;
+$str = '';
+while (isset($letStr[$i])) {
+    $str .= mb_strtoupper($letStr[$i]);
+    $i++;
+}
+echo "While : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$letStr = 'Hi I am ALex';
+$i = 0;
+$str = '';
+do {
+    $str .= mb_strtoupper($letStr[$i]);
+    $i++;
+} while (isset($letStr[$i]));
+echo "Do while : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$letStr = 'Hi I am ALex';
+$i = 0;
+$count = 0;
+$str = '';
+for ($i; isset($letStr[$i]); $i++) {
+    $count = $i;
+}
+for ($count = 0; $count <= $i; $count++) {
+    $str .= mb_strtoupper($letStr[$count]);
+}
+echo "For : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+$letStr = 'Hi I am ALex';
+$letStrArr = [];
+$i = 0;
+$count = 0;
+$str = '';
+while (isset($letStr[$i])) {
+    $letStrArr[] = $letStr[$i];
+    $i++;
+}
+foreach ($letStrArr as $key => $value) {
+    $str .= mb_strtoupper($value);
+}
+echo "Foreach : ";
+echo $str;
+echo "<hr>";
+//---------------------------------------------------------------------------------------------------------------------
+//7. Дан массив
+//['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya']
+//сделать все буквы с маленькой
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+while (isset($arr[$i])) {
+    $arrLower[] = mb_strtolower($arr[$i]);
+    $i++;
+}
+echo "While : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+do {
+    $arrLower[] = mb_strtolower($arr[$i]);
+    $i++;
+} while (isset($arr[$i]));
+echo "Do while : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+for ($i; isset($arr[$i]); $i++) {
+    $arrLower[] = mb_strtolower($arr[$i]);
+}
+echo "For : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+foreach ($arr as $key => $value) {
+    $arrLower[] = mb_strtolower($value);
+}
+echo "Foreach : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+//8. Дан массив
+//['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya']
+//сделать все буквы с большой
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+while (isset($arr[$i])) {
+    $arrLower[] = mb_strtoupper($arr[$i]);
+    $i++;
+}
+echo "While : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+do {
+    $arrLower[] = mb_strtoupper($arr[$i]);
+    $i++;
+} while (isset($arr[$i]));
+echo "Do while : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+for ($i; isset($arr[$i]); $i++) {
+    $arrLower[] = mb_strtoupper($arr[$i]);
+}
+echo "For : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arr = ['Alex', 'Vanya', 'Tanya', 'Lena', 'Tolya'];
+$i = 0;
+$arrLower = [];
+foreach ($arr as $key => $value) {
+    $arrLower[] = mb_strtoupper($value);
+}
+echo "Foreach : ";
+echo "<pre>";
+print_r($arrLower);
+echo "</pre>";
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+//9. Дано число
+//let num = 1234678
+//развернуть ее в обратном направлении
+$letNum = 1234678;
+$letNum = (string)$letNum;
+$i = -1;
+$letNumRevers = '';
+while (isset($letNum[$i])) {
+    $letNumRevers .= $letNum[$i];
+    $i--;
+}
+$letNumRevers = (int)$letNumRevers;
+echo "While : ";
+echo $letNumRevers;
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$letNum = 1234678;
+$letNum = (string)$letNum;
+$i = -1;
+$letNumRevers = '';
+do {
+    $letNumRevers .= $letNum[$i];
+    $i--;
+} while (isset($letNum[$i]));
+$letNumRevers = (int)$letNumRevers;
+echo "Do while : ";
+echo $letNumRevers;
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$letNum = 1234678;
+$letNum = (string)$letNum;
+$i = -1;
+$letNumRevers = '';
+for ($i = -1; isset($letNum[$i]); $i--) {
+    $letNumRevers .= $letNum[$i];
+}
+$letNumRevers = (int)$letNumRevers;
+echo "For : ";
+echo $letNumRevers;
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$letNum = 1234678;
+$letNum = (string)$letNum;
+$i = 0;
+$letNumArr = [];
+while (isset($letNum[$i])) {
+    $letNumArr[] = $letNum[$i];
+    $i++;
+}
+$i = -1;
 
-???????????????????????????????????
+foreach ($letNumArr as $value) {
+    $letNumRevers .= $letNumArr[$i];
+    $i--;
+}
+$letNumRevers = (int)$letNumRevers;
+echo "Foreach : ";
+echo $letNumRevers;
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+//10. Дан массив
+//[44, 12, 11, 7, 1, 99, 43, 5, 69]
+//отсортируй его в порядке убывания
 
+$arrNum = [44, 12, 11, 7, 1, 99, 43, 5, 69,];
+$arrCount = 0;
+$i = 0;
+while (isset($arrNum[$i])) {
+    $arrCount = $i + 1;
+    $i++;
+}
+$i = 0;
+$j = 0;
+while ($i < $arrCount) {
+    while ($j < $arrCount - 1) {
+        if ($arrNum[$j] > $arrNum[$j + 1]) {
+            $temp = $arrNum[$j + 1];
+            $arrNum[$j + 1] = $arrNum[$j];
+            $arrNum[$j] = $temp;
+        }
+        $j++;
+    }
+    $i++;
+    if ($j == $arrCount - 1)
+        $j = 0;
 
-
-
-
-
+}
+echo '<pre>';
+print_r($arrNum);
+echo '<pre>';
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arrNum = [44, 12, 11, 7, 1, 99, 43, 5, 69,];
+$arrCount = 0;
+$i = 0;
+do {
+    $arrCount = $i + 1;
+    $i++;
+} while (isset($arrNum[$i]));
+$i = 0;
+$j = 0;
+do {
+    $i++;
+    if ($j == $arrCount - 1)
+        $j = 0;
+    do {
+        if ($arrNum[$j] > $arrNum[$j + 1]) {
+            $temp = $arrNum[$j + 1];
+            $arrNum[$j + 1] = $arrNum[$j];
+            $arrNum[$j] = $temp;
+        }
+        $j++;
+    } while ($j < $arrCount - 1);
+} while ($i < $arrCount);
+echo '<pre>';
+print_r($arrNum);
+echo '<pre>';
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arrNum = [44, 12, 11, 7, 1, 99, 43, 5, 69];
+$arrCount = 0;
+while (isset($arrNum[$arrCount])) {
+    $arrCount++;
+}
+for ($i = 0; $i < $arrCount; $i++) {
+    for ($j = 0; $j < $arrCount - 1; $j++) {
+        if ($arrNum[$j] > $arrNum[$j + 1]) {
+            $temp = $arrNum[$j + 1];
+            $arrNum[$j + 1] = $arrNum[$j];
+            $arrNum[$j] = $temp;
+        }
+    }
+}
+echo '<pre>';
+print_r($arrNum);
+echo '<pre>';
+echo "<hr>";
+//--------------------------------------------------------------------------------------------------------------------
+$arrNum = [44, 12, 11, 7, 1, 99, 43, 5, 69];
+$arrCount = 0;
+while (isset($arrNum[$arrCount])) {
+    $arrCount++;
+}
+foreach ($arrNum as $key => $value) {
+    for ($j = 0; $j < $arrCount - 1; $j++) {
+        if ($arrNum[$j] > $arrNum[$j + 1]) {
+            $temp = $arrNum[$j + 1];
+            $arrNum[$j + 1] = $arrNum[$j];
+            $arrNum[$j] = $temp;
+        }
+    }
+}
+echo '<pre>';
+print_r($arrNum);
+echo '<pre>';
+echo "<hr>";
 
 
 
