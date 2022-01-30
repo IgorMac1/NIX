@@ -1,0 +1,32 @@
+<?php
+return [
+    '' => [
+        'controller' => 'main',
+        'action' => 'index',
+    ],
+    'login' => [
+        'controller' => 'account',
+        'action' => 'login',
+    ],
+    'register' => [
+        'controller' => 'account',
+        'action' => 'register',
+    ],
+    'user' => [
+        'controller' => 'account',
+        'action' => 'user',
+    ],
+    'addNotice' => [
+        'controller' => 'notice',
+        'action' => 'addNotice'
+    ],
+    'listNotice' => [
+        'controller' => 'notice',
+        'action' => 'listNotice'
+    ],
+    'deleteNotice' => [
+        'controller' => 'notice',
+        'action' => 'deleteNotice'
+    ],
+
+];
